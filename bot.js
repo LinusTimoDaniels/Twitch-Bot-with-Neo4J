@@ -4,7 +4,7 @@ const tmi = require('tmi.js');
 const opts = {
     identity: {
         username: '7zenn7',
-        password: 'oauth:qz658wgfecajk625e5mwqzllbmacp8'
+        password: 'oauth:rws39c56z4q7xjk998f4yltvle1ach'
     },
     channels: [
         '7zenn7'
@@ -13,6 +13,7 @@ const opts = {
 
 // Create a client with our options
 const client = new tmi.client(opts);
+getToken();
 
 // Register our event handlers (defined below)
 client.on('message', onMessageHandler);
@@ -47,4 +48,12 @@ function rollDice () {
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
     console.log(`* Connected to ${addr}:${port}`);
+}
+
+function getToken() {
+    const response = fetch("https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=1tqcavkk6yknbau0v4jr88elsvfe6y&redirect_uri=http://localhost:3000&scope=chat%3Aread+chat%3Aedit")
+    .then(response => response)
+    .then((response) => {
+        console.log(response);
+    })
 }
