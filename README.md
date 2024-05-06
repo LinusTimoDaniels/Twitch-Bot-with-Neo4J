@@ -26,7 +26,7 @@ aber die Zeit hat nicht ganz gereicht, um dies fertig zu stellen.
 
 ![img_1.png](img_1.png)
 
-Auf dem Bild unten, sieht man einen auschnitt, wie die Nachrichten aus dem Chat in die Datenbank
-gespeichert werden.
+Auf dem Bild unten, sieht man einen Auschnitt, wie die Nachrichten aus dem Chat in die Datenbank
+gespeichert werden. Im Query, kann man Variablen mit dem $ Zeichen signieren, und diese anschliessend in einem Objekt mitgeben.
 
 ![img_2.png](img_2.png)
